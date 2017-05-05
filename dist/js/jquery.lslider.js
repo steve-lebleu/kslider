@@ -102,24 +102,17 @@
      */
     $.fn.lslider = function(options) {
 
-        // Ensure that only one completer exists
-        if (!$.data(document.body, 'lslider')) {
-
-            $.data(document.body, 'lslider', true);
+        return this.each(function() {
 
             _$slider = $(this);
 
             // Apply any options to the settings, override the defaults
             _options = $.fn.lslider.defaults = $.extend({}, $.fn.lslider.defaults, options);
 
-            // Initialize view component
-            //_app.view.init();
-
             // Bind events
             _app.handlers.init();
 
-            return $(this);
-        }
+        });
     };
 
     // Defaults

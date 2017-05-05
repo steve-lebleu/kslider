@@ -17,10 +17,20 @@
 
     "use strict";
 
+    /**
+     *
+     * @type {{}}
+     */
     var _app = {};
 
+    /**
+     *
+     */
     var _options;
 
+    /**
+     *
+     */
     var _$slider;
 
     /**
@@ -56,22 +66,26 @@
          */
         var init = function() {
 
-            setInterval(function()
+            setInterval(function(e)
             {
                 var elementToShow,
-                    sliderLength = _$slider.children().length,
-                    currentElement = _$slider.find('.active'),
-                    currentIdx = _$slider.children().index(currentElement) + 1;
+                  sliderLength = _$slider.children().length,
+                  currentElement = _$slider.find('.active'),
+                  currentIdx = _$slider.children().index(currentElement) + 1;
 
-                currentElement.fadeOut(750);
+                _options.beforeDisplay(e, currentElement);
+
+                currentElement.fadeOut(_options.animationSpeed);
                 currentElement.removeClass('active');
 
                 elementToShow = currentIdx < sliderLength ? currentElement.next() : _$slider.find('li:first-child');
 
-                elementToShow.fadeIn(750);
+                elementToShow.fadeIn(_options.animationSpeed);
                 elementToShow.addClass('active');
 
-            }, 5000);
+                _options.afterDisplay(e, elementToShow);
+
+            }, _options.pause);
         };
 
         var that = {};
@@ -88,43 +102,25 @@
      */
     $.fn.lslider = function(options) {
 
-        // Ensure that only one completer exists
-        if (!$.data(document.body, 'lslider')) {
-
-            $.data(document.body, 'lslider', true);
+        return this.each(function() {
 
             _$slider = $(this);
 
             // Apply any options to the settings, override the defaults
             _options = $.fn.lslider.defaults = $.extend({}, $.fn.lslider.defaults, options);
 
-            // Initialize view component
-            //_app.view.init();
-
             // Bind events
             _app.handlers.init();
 
-            return $(this);
-        }
+        });
     };
 
     // Defaults
     $.fn.lslider.defaults = {
-        url: null,                                          // Path of script or file REQUIRED
-        lsliderName: 'lslider',                             // Element ID
-        animation: 'fade', 				                          // Fade, slide, none
         animationSpeed: 350, 			                          // Animation in speed (ms)
-        begin: true,                                        // Check by string begin if true, in all world if false
-        onChar: 2,                                          // Launch request after n chars
-        maxResults: 10,                                     // Number of max results to display
-        field: null,                                        // Field on to apply filter REQUIRED
-        fieldsToDisplay: null,                              // Fields to display on the result item REQUIRED
-        beforeDisplay: function(e, dataset){},              // Callback fired before display of result set
-        afterDisplay: function(e, dataset){},               // Callback fired after display of result set
-        beforeFocus: function(e, element){},                // Callback fired before focus on result item
-        afterFocus: function(e, element){},                 // Callback fired after focus on result item
-        beforeComplete: function(e, dataset, element){},    // Callback fired before insertion of result
-        afterComplete: function(e, dataset, element){}      // Callback fired after insertion of result
+        pause: 5000,                                        // duration of one slide transition (ms)
+        beforeDisplay: function(e, hiddenElement){},        // Callback fired before display of result set
+        afterDisplay: function(e, visibleElement){}         // Callback fired after display of result set
     };
 
     $.lslider = $.fn.lslider;
