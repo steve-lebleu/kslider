@@ -5,7 +5,7 @@ body {
   margin: 0;
   width: 100%;
   font-family: @font-base;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 nav {
@@ -44,6 +44,14 @@ footer {
   & p {
     &:first-child {
       font-size: 1.75rem;
+      & a {
+        color: @color_4;
+        .transition(all 0.3s ease-in);
+        &:hover {
+          color: lighten(@color_4, 20%);
+        }
+      }
+
     }
   }
 }
@@ -71,10 +79,12 @@ pre {
 }
 
 em {
-  background: @color_4;
+  background: @color_10;
   .border-radius(3px);
   font-style: normal;
-  padding: 1px 3px;
+  padding: 2px 3px;
+  color: @color_7;
+  display: inline-block;
 }
 
 a {
@@ -82,7 +92,6 @@ a {
 }
 
 table {
-  font-size: 0.9rem;
   width: 100%;
   margin: 0 auto 20px auto;
   & thead {
@@ -90,17 +99,19 @@ table {
       font-size: 1.2rem;
       text-transform: uppercase;
       color: @color_9;
+      padding-bottom: 10px;
     }
   }
   & tbody {
     & tr {
       &:nth-child(even) {
-        background: #333333;
+        background: @color_0;
       }
       &:nth-child(odd) {
-        background: #232323;
+        background: @color_10;
       }
       & td {
+        font-size: 0.8rem;
         padding: 15px 5px;
         &:first-child {
           font-style: italic;
@@ -185,5 +196,19 @@ sup {
       .transition(all 0.3s ease-in-out);
       right: 0;
     }
+  }
+}
+
+.github-svg {
+  fill: @color_4;
+  color: @color_2;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+  .transition(all 0.3s ease-in-out);
+  &:hover {
+    fill: lighten(@color_4, 20%);
+    color: @color_4;
   }
 }
