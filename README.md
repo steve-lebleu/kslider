@@ -32,12 +32,28 @@ In your HTML page, between <head> tags, retrieve jQuery and lslider :
 Into your HTML code, place the following code and replace/add your own images :
 
 ``` html 
-<ul class="lslider">
-    <li class="active"><img src="img/item-1.jpg" alt="Item 1" /></li>
-    <li><img src="img/item-2.jpg" alt="Item 2" /></li>
-    <li><img src="img/item-3.jpg" alt="Item 3" /></li>
-    <li><img src="img/item-4.jpg" alt="Item 4" /></li>
-</ul>
+<div id="lslider-wrapper" class="lslider-wrapper">
+    <ul class="lslider">
+        <li class="active"><img src="img/item-1.jpg" alt="Damned, pirates are in the square" /></li>
+        <li><img src="img/item-2.jpg" alt="Light rays penetrating the forest" /></li>
+        <li><img src="img/item-3.jpg" alt="Mountains on the horizon" /></li>
+        <li><img src="img/item-4.jpg" alt="Sunset on a lake" /></li>
+    </ul>
+    <div class="lslider-bullets-wrapper">
+        <ul id="lslider-bullets" class="lslider-bullets"></ul>
+    </div>
+    <div class="lslider-nav nav-left">
+        <a href="#" data-direction="prev">
+            <i class="icon-left-dir"></i>
+        </a>
+    </div>
+    <div class="lslider-nav nav-right">
+        <a href="#" data-direction="next">
+            <i class="icon-right-dir"></i>
+        </a>
+    </div>
+    <span class="lslider-alt"></span>
+</div>
 ```
  
 Invoke the plugin :
