@@ -1,8 +1,15 @@
+.lslider-wrapper {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
 .lslider {
   display: block;
   margin: 0 auto;
   width: 960px;
-  height: 360px;
+  height: auto;
+  max-width: 100%;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
   padding: 0;
   list-style-type: none;
@@ -16,4 +23,80 @@
 
 .lslider li.active {
   display: block;
+}
+
+.lslider li img {
+  max-width: 100%;
+}
+
+.lslider-alt {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: @color_1;
+}
+
+/* Navigation */
+.lslider-nav {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  font-size: 2.5rem;
+  opacity: 0;
+  .transition(all 0.3s ease-in-out);
+  &.nav-left, &.nav-right {
+    & a {
+      display: none;
+      position: relative;
+      text-align: center;
+      top: 40%;
+      color: @color_1;
+    }
+  }
+  &.nav-left {
+    left: 0;
+  }
+  &.nav-right {
+    right: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+    &.nav-left, &.nav-right {
+      & a {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Bullets list */
+.lslider-bullets-wrapper {
+  position: absolute;
+  bottom: 2.50%;
+  width: 100%;
+}
+
+.lslider-bullets {
+  position: relative;
+  width: 200px;
+  text-align: center;
+  padding-left: 0;
+  margin: 0 auto;
+  & li {
+    display: inline-block;
+    & .icon-circle {
+      color: @color_4;
+    }
+    & .icon-circle-empty {
+      color: @color_1;
+    }
+
+  }
 }

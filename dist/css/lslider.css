@@ -1,8 +1,14 @@
+.lslider-wrapper {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
 .lslider {
   display: block;
   margin: 0 auto;
   width: 960px;
-  height: 360px;
+  height: auto;
+  max-width: 100%;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
   padding: 0;
   list-style-type: none;
@@ -14,4 +20,75 @@
 }
 .lslider li.active {
   display: block;
+}
+.lslider li img {
+  max-width: 100%;
+}
+.lslider-alt {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #dfdfdf;
+}
+/* Navigation */
+.lslider-nav {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  font-size: 2.5rem;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.lslider-nav.nav-left a,
+.lslider-nav.nav-right a {
+  display: none;
+  position: relative;
+  text-align: center;
+  top: 40%;
+  color: #dfdfdf;
+}
+.lslider-nav.nav-left {
+  left: 0;
+}
+.lslider-nav.nav-right {
+  right: 0;
+}
+.lslider-nav:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.lslider-nav:hover.nav-left a,
+.lslider-nav:hover.nav-right a {
+  display: block;
+}
+/* Bullets list */
+.lslider-bullets-wrapper {
+  position: absolute;
+  bottom: 2.50%;
+  width: 100%;
+}
+.lslider-bullets {
+  position: relative;
+  width: 200px;
+  text-align: center;
+  padding-left: 0;
+  margin: 0 auto;
+}
+.lslider-bullets li {
+  display: inline-block;
+}
+.lslider-bullets li .icon-circle {
+  color: #e55050;
+}
+.lslider-bullets li .icon-circle-empty {
+  color: #dfdfdf;
 }
