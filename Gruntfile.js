@@ -33,6 +33,7 @@ module.exports = function(grunt) {
 					paths: ["src/less/"]
 				},
 				files: {
+					"src/css/lslider.css": "src/less/main.less",
 					"dist/css/lslider.css": "src/less/main.less",
 					"demo/css/lslider.css": "src/less/main.less",
 					"demo/css/demo.css": "src/less/demo.less"
