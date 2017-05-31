@@ -17,7 +17,7 @@
     <link href="css/lslider.css" rel="stylesheet" type="text/css" media="screen" />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/jquery.lslider.js"></script>
+    <script src="js/jquery.lslider.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -157,6 +157,13 @@ $(document).ready(function() {
                 <td>true</td>
             </tr>
             <tr>
+                <td>description</td>
+                <td>boolean</td>
+                <td>Display alt attribute as description</td>
+                <td>true|false</td>
+                <td>true</td>
+            </tr>
+            <tr>
                 <td>beforeDisplay</td>
                 <td>function</td>
                 <td>Callback fired before display image</td>
@@ -197,7 +204,7 @@ $(document).ready(function() {
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('.lslider').lslider({navigation:false});
+        $('.lslider').lslider({});
     });
 </script>
 

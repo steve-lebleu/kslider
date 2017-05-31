@@ -55,6 +55,7 @@ Following options are available :
 * **animationSpeed**: int, speed of the animation (ms)
 * **pause**: int, duration of one slide transition (ms)
 * **navigation**: boolean, using navigation
+* **description**: boolean, display alt attribute as description
 * **beforeDisplay**: function(e, hiddenElement), function, callback fired before display of image
 * **afterDisplay**: function(e, visibleElement), function, callback fired after display of image
                 

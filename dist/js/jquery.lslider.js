@@ -136,13 +136,15 @@
 
             // ----- Alternative text
 
-            var $alt = $('<span>', {
-                'class' : 'lslider-alt'
-            });
+            if(_options.description === true) {
+                var $alt = $('<span>', {
+                    'class' : 'lslider-alt'
+                });
 
-            $alt.css({'left' : ( dist + 25 ) + 'px'}).html(_$slider.find('img').eq(0).attr('alt'));
+                $alt.css({'left' : ( dist + 25 ) + 'px'}).html(_$slider.find('img').eq(0).attr('alt'));
 
-            $wrapper.append($alt);
+                $wrapper.append($alt);
+            }
         };
 
         /**
@@ -155,7 +157,6 @@
             var elementToShow,
               sliderLength = _$slider.children().length,
               currentElement = _$slider.find('.active'),
-              $alt = $('.lslider-alt'),
               currentIdx;
 
             _options.beforeDisplay(e, currentElement);
@@ -183,7 +184,7 @@
             elementToShow.fadeIn(_options.animationSpeed);
             elementToShow.addClass('active');
 
-            $alt.html(elementToShow.find('img').attr('alt'));
+            _options.description && $('.lslider-alt').html(elementToShow.find('img').attr('alt'));
 
             _options.afterDisplay(e, elementToShow);
 
@@ -295,7 +296,6 @@
 
             // Bind events
             _app.handlers.init();
-
         });
     };
 
@@ -304,6 +304,7 @@
         animationSpeed: 350, 			                          // Animation in speed (ms)
         pause: 5000,                                        // duration of one slide transition (ms)
         navigation: true,                                   // Show navigation
+        description: true,                                  // Show description
         beforeDisplay: function(e, hiddenElement){},        // Callback fired before display of result set
         afterDisplay: function(e, visibleElement){}         // Callback fired after display of result set
     };
