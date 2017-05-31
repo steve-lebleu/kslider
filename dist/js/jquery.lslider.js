@@ -1,7 +1,7 @@
 /**
- * lSlider is a free slider script
+ * lSlider, simple free slider
  *
- * Copyright (C) 2014  Lebleu Steve <dev@e-lless.be>
+ * Copyright (C) 2014  Lebleu Steve <info@e-lless.be>
  *
  * URL : http://plugins.e-lless.be/lslider/
 
@@ -52,19 +52,97 @@
             if(!_$slider.length)
                 return false;
 
-            // ----- Sizing
-
             setView();
+        };
 
-            // ----- Bullets list display init
+        /**
+         *
+         */
+        var setView = function() {
 
-            var l = _$slider.children().length, i = 0, $bulletsWrapper = $('#lslider-bullets');
+            var $wrapper = $('#lslider-wrapper');
+            var $img = _$slider.find('li > img').first();
+            var dist = ( $(window).width() - $img.width() ) / 2;
+
+            $wrapper.css({
+                width : '100%',
+                height: $img.height() + 'px'
+            });
+
+            _$slider.css({
+                height: $img.height() + 'px'
+            });
+
+            // ----- Bullets
+
+            var $bulletsWrapper = $('<div>', {
+                'class' : 'lslider-bullets-wrapper'
+            });
+
+            var $bulletsList = $('<ul>', {
+                'class' : 'lslider-bullets',
+                'id' : 'lslider-bullets'
+            });
+
+            var l = _$slider.children().length, i = 0;
 
             for (i; i < l; i++) {
-                i === 0 && $bulletsWrapper.append('<li><i class="icon-circle"></i></li>');
-                i !== 0 && $bulletsWrapper.append('<li><i class="icon-circle-empty"></i></li>');
+                i === 0 && $bulletsList.append('<li><i class="icon-circle"></i></li>');
+                i !== 0 && $bulletsList.append('<li><i class="icon-circle-empty"></i></li>');
             }
 
+            $bulletsWrapper.append($bulletsList);
+
+            $wrapper.append($bulletsWrapper);
+
+            // ----- Navigation
+
+            if(_options.navigation === true) {
+
+                var $sliderNav = $('<div>', {
+                    'class' : 'lslider-nav'
+                });
+
+                var $linkNav = $('<a>', {
+                    'href': '#'
+                });
+
+                var $iconNav = $('<i>', {});
+
+                var $linkLeft = $linkNav.clone().data('direction', 'prev');
+                var $linkRight = $linkNav.clone().data('direction', 'next');
+
+                var $iconLeft = $iconNav.clone().addClass('icon-left-dir');
+                var $iconRight = $iconNav.clone().addClass('icon-right-dir');
+
+                $linkLeft.append($iconLeft);
+                $linkRight.append($iconRight);
+
+                var $navLeft = $sliderNav
+                  .clone()
+                  .addClass('nav-left')
+                  .append($linkLeft);
+
+                var $navRight = $sliderNav
+                  .clone()
+                  .addClass('nav-right')
+                  .append($linkRight);
+
+                $navLeft.css({'left' : dist + 'px'});
+                $navRight.css({'right' : dist + 'px'});
+
+                $wrapper.append($navLeft, $navRight);
+            }
+
+            // ----- Alternative text
+
+            var $alt = $('<span>', {
+                'class' : 'lslider-alt'
+            });
+
+            $alt.css({'left' : ( dist + 25 ) + 'px'}).html(_$slider.find('img').eq(0).attr('alt'));
+
+            $wrapper.append($alt);
         };
 
         /**
@@ -128,35 +206,11 @@
             $($listItems[i]).html('<i class="icon-circle"></i>');
         };
 
-        /**
-         *
-         */
-        var setView = function() {
-
-            var $wrapper = $('#lslider-wrapper');
-            var $img = _$slider.find('li > img').first();
-
-            $wrapper.css({
-                width : '100%',
-                height: $img.height() + 'px'
-            });
-
-            _$slider.css({
-                height: $img.height() + 'px'
-            });
-
-            var $navLeft = $('.nav-left'), $navRight = $('.nav-right'), $alt = $('.lslider-alt'), dist = ( $(window).width() - $img.width() ) / 2 ;
-
-            $navLeft.css({'left' : dist + 'px'});
-            $navRight.css({'right' : dist + 'px'});
-            $alt.css({'left' : ( dist + 25 ) + 'px'}).html(_$slider.find('img').eq(0).attr('alt'));
-        };
-
         var that = {};
 
         that.init = init;
-        that.slide = slide;
         that.setView = setView;
+        that.slide = slide;
         that.switchBullet = switchBullet;
 
         return that;
@@ -175,8 +229,8 @@
          */
         var init = function() {
             onInitialize();
-            onNavigate();
             onResize();
+            _options.navigation && onNavigate();
         };
 
         /**
@@ -249,6 +303,7 @@
     $.fn.lslider.defaults = {
         animationSpeed: 350, 			                          // Animation in speed (ms)
         pause: 5000,                                        // duration of one slide transition (ms)
+        navigation: true,                                   // Show navigation
         beforeDisplay: function(e, hiddenElement){},        // Callback fired before display of result set
         afterDisplay: function(e, visibleElement){}         // Callback fired after display of result set
     };

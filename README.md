@@ -39,20 +39,6 @@ Into your HTML code, place the following code and replace/add your own images :
         <li><img src="img/item-3.jpg" alt="Mountains on the horizon" /></li>
         <li><img src="img/item-4.jpg" alt="Sunset on a lake" /></li>
     </ul>
-    <div class="lslider-bullets-wrapper">
-        <ul id="lslider-bullets" class="lslider-bullets"></ul>
-    </div>
-    <div class="lslider-nav nav-left">
-        <a href="#" data-direction="prev">
-            <i class="icon-left-dir"></i>
-        </a>
-    </div>
-    <div class="lslider-nav nav-right">
-        <a href="#" data-direction="next">
-            <i class="icon-right-dir"></i>
-        </a>
-    </div>
-    <span class="lslider-alt"></span>
 </div>
 ```
  
@@ -68,6 +54,7 @@ Following options are available :
 
 * **animationSpeed**: int, speed of the animation (ms)
 * **pause**: int, duration of one slide transition (ms)
+* **navigation**: boolean, using navigation
 * **beforeDisplay**: function(e, hiddenElement), function, callback fired before display of image
 * **afterDisplay**: function(e, visibleElement), function, callback fired after display of image
                 

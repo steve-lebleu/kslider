@@ -63,20 +63,6 @@
             <li><img src="img/item-3.jpg" alt="Mountains on the horizon" /></li>
             <li><img src="img/item-4.jpg" alt="Sunset on a lake" /></li>
         </ul>
-        <div class="lslider-bullets-wrapper">
-            <ul id="lslider-bullets" class="lslider-bullets"></ul>
-        </div>
-        <div class="lslider-nav nav-left">
-            <a href="#" data-direction="prev">
-                <i class="icon-left-dir"></i>
-            </a>
-        </div>
-        <div class="lslider-nav nav-right">
-            <a href="#" data-direction="next">
-                <i class="icon-right-dir"></i>
-            </a>
-        </div>
-        <span class="lslider-alt"></span>
     </div>
 </div>
 
@@ -122,19 +108,6 @@ $ bower install lslider --save
         &lt;li&gt;&lt;img src="img/item-3.jpg" alt="Mountains on the horizon" /&gt;&lt;/li&gt;
         &lt;li&gt;&lt;img src="img/item-4.jpg" alt="Sunset on a lake" /&gt;&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;div class="lslider-bullets-wrapper"&gt;
-        &lt;ul id="lslider-bullets" class="lslider-bullets">&lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class="lslider-nav nav-left"&gt;
-        &lt;a href="#" data-direction="prev"&gt;
-            &lt;i class="icon-left-dir">&lt;/i&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="lslider-nav nav-right"&gt;
-        &lt;a href="#" data-direction="next"&gt;
-            &lt;i class="icon-right-dir">&lt;/i&gt;
-        &lt;/a&gt;
-    &lt;/div&gt;
 &lt;/div&gt;
     </code>
 </pre>
@@ -177,6 +150,13 @@ $(document).ready(function() {
                 <td>5000</td>
             </tr>
             <tr>
+                <td>navigation</td>
+                <td>boolean</td>
+                <td>Use navigation</td>
+                <td>true|false</td>
+                <td>true</td>
+            </tr>
+            <tr>
                 <td>beforeDisplay</td>
                 <td>function</td>
                 <td>Callback fired before display image</td>
@@ -217,7 +197,7 @@ $(document).ready(function() {
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('.lslider').lslider({});
+        $('.lslider').lslider({navigation:false});
     });
 </script>
 
