@@ -1,12 +1,12 @@
-# Lslider - An ultra-simple jQuery slider plugin
+# kSlider - An ultra-simple jQuery slider plugin
 
-[![GitHub version](https://badge.fury.io/gh/e-lLess%2Flslider.svg)](https://badge.fury.io/gh/e-lLess%2Flslider)
+[![GitHub version](https://badge.fury.io/gh/e-lLess%2Fkslider.svg)](https://badge.fury.io/gh/e-lLess%2Fkslider)
 
-Lslider is an ultra-simple jQuery slider plugin
+kSlider is an ultra-simple jQuery slider plugin
         
 ## Demo
 
-http://plugins.e-lless.be/lslider/
+http://jquery.konfer.be/kslider/
 
 ## Installation
 
@@ -19,21 +19,21 @@ Obvious install with [Bower](http://bower.io) :
 In your HTML page, between <head> tags, retrieve styles:
 
 ``` html 
-<link href="path_to_lslider_css" rel="stylesheet" type="text/css" />
+<link href="path_to_kslider_css" rel="stylesheet" type="text/css" />
 ```
 
-In your HTML page, between <head> tags, retrieve jQuery and lslider :
+In your HTML page, between <head> tags, retrieve jQuery and kslider :
 
 ``` html 
 <script src="directory_of_your_jquery/jquery.js"></script>
-<script src="directory_of_your_completer/jquery.lslider.js"></script>
+<script src="directory_of_your_completer/jquery.kslider.js"></script>
 ```
 
 Into your HTML code, place the following code and replace/add your own images :
 
 ``` html 
-<div id="lslider-wrapper" class="lslider-wrapper">
-    <ul class="lslider">
+<div id="kslider-wrapper" class="kslider-wrapper">
+    <ul class="kslider">
         <li class="active"><img src="img/item-1.jpg" alt="Damned, pirates are in the square" /></li>
         <li><img src="img/item-2.jpg" alt="Light rays penetrating the forest" /></li>
         <li><img src="img/item-3.jpg" alt="Mountains on the horizon" /></li>
@@ -45,7 +45,7 @@ Into your HTML code, place the following code and replace/add your own images :
 Invoke the plugin :
 
 ``` javascript
-$('.lslider').lslider({});
+$('.kslider').kslider({});
 ```
 
 ## Options

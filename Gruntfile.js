@@ -9,9 +9,12 @@ module.exports = function(grunt) {
 					sourceMapName: 'dist/js/sourcemap.map'
 				},
 				files: {
-					"dist/js/jquery.lslider.min.js": [
-						'src/js/jquery.lslider.js'
-					]
+					"dist/js/jquery.kslider.min.js": [
+						'src/js/jquery.kslider.js'
+					],
+                    "demo/js/jquery.kslider.min.js": [
+                        'src/js/jquery.kslider.js'
+                    ]
 				}
 			}
 		},
@@ -22,7 +25,7 @@ module.exports = function(grunt) {
 			scripts: {
 				src: [
 					'src/vendors/jquery/dist/jquery.min.js',
-					'src/js/lslider.js'
+					'src/js/kslider.js'
 				],
 				dest: 'dist/js/app.js'
 			}
@@ -33,9 +36,9 @@ module.exports = function(grunt) {
 					paths: ["src/less/"]
 				},
 				files: {
-					"src/css/lslider.css": "src/less/main.less",
-					"dist/css/lslider.css": "src/less/main.less",
-					"demo/css/lslider.css": "src/less/main.less",
+					"src/css/kslider.css": "src/less/main.less",
+					"dist/css/kslider.css": "src/less/main.less",
+					"demo/css/kslider.css": "src/less/main.less",
 					"demo/css/demo.css": "src/less/demo.less"
 				}
 			}
@@ -65,7 +68,7 @@ module.exports = function(grunt) {
 				},
 				target: {
 					files: {
-						'src/css/lslider.min.css': ['src/css/lslider.css']
+						'src/css/kslider.min.css': ['src/css/kslider.css']
 					}
 				}
 			}
