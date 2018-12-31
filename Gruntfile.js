@@ -30,6 +30,17 @@ module.exports = function(grunt) {
 				dest: 'dist/js/app.js'
 			}
 		},
+		sass: {                              // Task
+			dist: {                            // Target
+				options: {                       // Target options
+					style: 'expanded'
+				},
+				files: {                         							
+					'dist/css/kslider.css': [ 'src/sass/kslider.scss' ],
+					'demo/css/demo.css': [ 'src/sass/demo.scss' ],
+				}
+			}
+		},
 		less: {
 			main: {
 				options: {
@@ -106,6 +117,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-sass');
 
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('dev', ['watch']);
