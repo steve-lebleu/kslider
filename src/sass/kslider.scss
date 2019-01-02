@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+@import "mixins";
+@import 'variables-demo';
+
 .kslider-wrapper {
   display: block;
   margin: 0 auto;
@@ -38,7 +42,7 @@
   background: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   font-size: 1rem;
-  color: @color_1;
+  color: $color_1;
 }
 
 /* Navigation */
@@ -49,14 +53,14 @@
   height: 100%;
   font-size: 2.5rem;
   opacity: 0;
-  .transition(all 0.3s ease-in-out);
+  @include transition(all 0.3s ease-in-out);
   &.nav-left, &.nav-right {
     & a {
       display: none;
       position: relative;
       text-align: center;
       top: 40%;
-      color: @color_1;
+      color: $color_1;
     }
   }
   &.nav-left {
@@ -92,11 +96,10 @@
   & li {
     display: inline-block;
     & .icon-circle {
-      color: @color_12;
+      color: $color_12;
     }
     & .icon-circle-empty {
-      color: @color_1;
+      color: $color_1;
     }
-
   }
 }
