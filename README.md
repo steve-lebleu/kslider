@@ -2,11 +2,11 @@
 
 [![GitHub version](https://badge.fury.io/gh/e-lLess%2Fkslider.svg)](https://badge.fury.io/gh/e-lLess%2Fkslider)
 
-kSlider is an ultra-simple jQuery slider plugin
+Ultra-simple jQuery slider plugin
         
 ## Demo
 
-http://jquery.konfer.be/kslider/
+https://demo.konfer.be/kslider/
 
 ## Installation
 
