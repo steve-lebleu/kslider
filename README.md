@@ -10,9 +10,17 @@ https://demo.konfer.be/kslider/
 
 ## Installation
 
-Obvious install with [Bower](http://bower.io) :
+### With [Bower](http://bower.io)
 
-> $ bower install lslider --save
+> $ bower install kslider --save
+
+### With [npm](http://npmjs.com)
+
+> $ npm i kslider --save
+
+### With [yarn](https://yarnpkg.com/lang/en/)
+
+> $ yarn add kslider --save
 
 ## How to use ?
 
