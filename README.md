@@ -3,8 +3,6 @@
 [![jQuery](https://img.shields.io/badge/jQuery-3.1-blue)](https://www.typescriptlang.org/)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/gpl-license.php)
 
-[![Build Status](https://travis-ci.com/konfer-be/kslider.svg?token=DmbPFqq91BhwsJKVDsHw&branch=master)](https://travis-ci.com/konfer-be/kslider)
-[![Coverage](https://img.shields.io/badge/coverage-88.35%25-green)](https://github.com/konfer-be/kslider)
 [![Dependencies](https://david-dm.org/konfer-be/kslider.svg)](https://david-dm.org/konfer-be/kslider)
 [![devDependencies](https://david-dm.org/konfer-be/kslider/dev-status.svg)](https://david-dm.org/konfer-be/kslider?type=dev)
 [![Known Vulnerabilities](https://snyk.io/test/github/konfer-be/kslider/badge.svg?style=plastic)](https://snyk.io/test/github/konfer-be/kslider)
