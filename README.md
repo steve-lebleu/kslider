@@ -1,4 +1,4 @@
-# kSlider - An ultra-simple jQuery slider plugin
+# kSlider - Ultra light jQuery slider plugin
 
 [![jQuery](https://img.shields.io/badge/jQuery-3.1-blue)](https://www.typescriptlang.org/)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/gpl-license.php)
@@ -7,7 +7,7 @@
 [![devDependencies](https://david-dm.org/konfer-be/kslider/dev-status.svg)](https://david-dm.org/konfer-be/kslider?type=dev)
 [![Known Vulnerabilities](https://snyk.io/test/github/konfer-be/kslider/badge.svg?style=plastic)](https://snyk.io/test/github/konfer-be/kslider)
 
-Ultra-simple jQuery slider plugin
+Ultra light jQuery slider plugin.
         
 ## Demo
 

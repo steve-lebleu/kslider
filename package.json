@@ -1,6 +1,6 @@
 {
   "name": "kslider",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Ultra light jquery slider",
   "main": "index.js",
   "scripts": {
