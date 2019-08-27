@@ -2,27 +2,28 @@
 // Generated on Wed Apr 26 2017 02:41:36 GMT+0200 (CEST)
 
 module.exports = function(config) {
+
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '../..',
 
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine', 'requirejs'],
+    frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
     files: [
-      'test-main.js',
-      'demo/js/jquery.js',
-      'dist/js/jquery.completer.js',
-      'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
-      'node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
-      'node_modules/jasmine-core/lib/jasmine-core/boot.js',
-      'node_modules/jasmine-core/lib/jasmine-core/json2.js',
-      'node_modules/jasmine-jquery/lib/jasmine-jquery.js',
-      'tests/**/*.test.js'
+      //'tests/test-main.js',
+      { pattern: 'dist/js/jquery.js', included: true },
+      { pattern: 'dist/js/jquery.kslider.min.js', included: true },
+      { pattern: 'node_modules/jasmine-core/lib/jasmine-core/jasmine.js', included: true },
+      { pattern: 'node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js', included: true },
+      { pattern: 'node_modules/jasmine-core/lib/jasmine-core/boot.js', included: true },
+      { pattern: 'node_modules/jasmine-core/lib/jasmine-core/json2.js', included: true },
+      { pattern: 'node_modules/jasmine-jquery/lib/jasmine-jquery.js', included: true },
+      { pattern: 'tests/**/*.test.js', included: true },
+      
     ],
 
     // list of files to exclude
@@ -39,7 +40,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['kjhtml'],
 
 
     // web server port
@@ -61,7 +62,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'Opera', 'IE', 'Safari'],
+    browsers: ['Chrome', 'Firefox', 'Opera'],
 
 
     // Continuous Integration mode

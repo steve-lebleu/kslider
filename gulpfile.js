@@ -1,7 +1,6 @@
 'use strict';
 
 // “gulp-imagemin” (optimisation des images)npm i
-// “gulp-uncss” (suppression des CSS non utilisés)
 // "gulp-deploy-git"
 
 /**
@@ -21,7 +20,6 @@ const csso = require('gulp-csso');
 const rename = require('gulp-rename');
 const livereload = require('gulp-livereload');
 const imagemin = require('gulp-imagemin');
-const uncss = require('gulp-uncss');
 const critical = require('gulp-critical-css');
 
 /**
