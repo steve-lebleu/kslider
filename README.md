@@ -1,6 +1,6 @@
 # jQuery slider plugin
 
-[![jQuery](https://img.shields.io/badge/jQuery-3.1-blue)](https://www.typescriptlang.org/)
+[![jQuery](https://img.shields.io/badge/jQuery-3.5.0-blue)](https://jquery.com/)
 ![Requires.io (branch)](https://img.shields.io/requires/github/konfer-be/kslider/master)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/konfer-be/kslider)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/gpl-license.php)

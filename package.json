@@ -1,6 +1,6 @@
 {
   "name": "kslider",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Ultra light jquery slider",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "plugin"
   ],
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "critical": "3.0.0",
