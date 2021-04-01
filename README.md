@@ -1,29 +1,22 @@
-# kSlider - Ultra light jQuery slider plugin
+# jQuery slider plugin
 
 [![jQuery](https://img.shields.io/badge/jQuery-3.1-blue)](https://www.typescriptlang.org/)
+![Requires.io (branch)](https://img.shields.io/requires/github/konfer-be/kslider/master)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/konfer-be/kslider)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/gpl-license.php)
 
-[![Dependencies](https://david-dm.org/konfer-be/kslider.svg)](https://david-dm.org/konfer-be/kslider)
-[![devDependencies](https://david-dm.org/konfer-be/kslider/dev-status.svg)](https://david-dm.org/konfer-be/kslider?type=dev)
-[![Known Vulnerabilities](https://snyk.io/test/github/konfer-be/kslider/badge.svg?style=plastic)](https://snyk.io/test/github/konfer-be/kslider)
-
-Ultra light jQuery slider plugin.
+Simple jQuery slider plugin.
         
-## Demo
+## > Demo
 
 https://demo.konfer.be/kslider/
 
-## Installation
+## > Install
 
-### With [npm](http://npmjs.com)
-
+``` bash 
 > $ npm i kslider --save
-
-### With [yarn](https://yarnpkg.com/lang/en/)
-
-> $ yarn add kslider --save
-
-## How to use ?
+```
+## > How to use ?
 
 In your HTML page, between <head> tags, retrieve styles:
 
@@ -57,9 +50,9 @@ Invoke the plugin :
 $('.kslider').kslider({});
 ```
 
-## Options
+## > Options
 
-Following options are available :
+Following options are available:
 
 * **animationSpeed**: int, speed of the animation (ms)
 * **pause**: int, duration of one slide transition (ms)
@@ -68,3 +61,6 @@ Following options are available :
 * **beforeDisplay**: function(e, hiddenElement), function, callback fired before display of image
 * **afterDisplay**: function(e, visibleElement), function, callback fired after display of image
                 
+## > Licence
+
+[GPL](https://opensource.org/licenses/gpl-license.php())
