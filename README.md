@@ -1,7 +1,8 @@
 # jQuery slider plugin
 
-[![jQuery](https://img.shields.io/badge/jQuery-3.5.0-blue)](https://jquery.com/)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/steve-lebleu/kslider)
+![Github action workflow status](https://github.com/steve-lebleu/kslider/actions/workflows/build.yml/badge.svg?branch=master)
+![GitHub Release](https://img.shields.io/github/v/release/:steve-lebleu/:kslider)
+[![CodeFactor](https://www.codefactor.io/repository/github/steve-lebleu/kslider/badge)](https://www.codefactor.io/repository/github/steve-lebleu/kslider)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/gpl-license.php)
 
 Simple jQuery slider plugin.
@@ -9,6 +10,10 @@ Simple jQuery slider plugin.
 ## > Demo
 
 https://fabrik.konfer.be/kslider/
+
+## > Page
+
+Github page: https://github.com/steve-lebleu/kslider
 
 ## > Install
 
@@ -34,12 +39,12 @@ Into your HTML code, place the following code and replace/add your own images :
 
 ``` html 
 <div id="kslider-wrapper" class="kslider-wrapper">
-    <ul class="kslider">
-        <li class="active"><img src="img/item-1.jpg" alt="Damned, pirates are in the square" /></li>
-        <li><img src="img/item-2.jpg" alt="Light rays penetrating the forest" /></li>
-        <li><img src="img/item-3.jpg" alt="Mountains on the horizon" /></li>
-        <li><img src="img/item-4.jpg" alt="Sunset on a lake" /></li>
-    </ul>
+  <ul class="kslider">
+    <li class="active"><img src="img/item-1.jpg" alt="Damned, pirates are in the square" /></li>
+    <li><img src="img/item-2.jpg" alt="Light rays penetrating the forest" /></li>
+    <li><img src="img/item-3.jpg" alt="Mountains on the horizon" /></li>
+    <li><img src="img/item-4.jpg" alt="Sunset on a lake" /></li>
+  </ul>
 </div>
 ```
  
@@ -63,10 +68,3 @@ Following options are available:
 ## > Licence
 
 [GPL](https://opensource.org/licenses/gpl-license.php())
-
-## Todo's
-
-- Use fabrikable template
-- UT
-- Github actions
-- Security
