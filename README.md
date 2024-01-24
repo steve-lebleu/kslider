@@ -1,11 +1,11 @@
 # jQuery slider plugin
 
 ![Github action workflow status](https://github.com/steve-lebleu/kslider/actions/workflows/build.yml/badge.svg?branch=master)
-![GitHub Release](https://img.shields.io/github/v/release/:steve-lebleu/:kslider)
 [![CodeFactor](https://www.codefactor.io/repository/github/steve-lebleu/kslider/badge)](https://www.codefactor.io/repository/github/steve-lebleu/kslider)
+![GitHub Release](https://img.shields.io/github/v/release/steve-lebleu/kslider?logo=Github)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/gpl-license.php)
 
-Simple jQuery slider plugin.
+Simple jQuery > 3.1.1. slider plugin.
         
 ## > Demo
 
@@ -13,7 +13,7 @@ https://fabrik.konfer.be/kslider/
 
 ## > Page
 
-Github page: https://github.com/steve-lebleu/kslider
+Github page: https://steve-lebleu.github.io/kslider/
 
 ## > Install
 
